@@ -1,0 +1,103 @@
+/* Background, foreground */
+@define-color col-1 #0f0f0f;
+@define-color col-2 #ececec;
+/* Occupied tag background */
+@define-color col-3 #303030;
+/* Focused tag background */
+@define-color col-4 #1d1d1d;
+/* Tray, inhibitor modules background */
+@define-color col-5 #151515;
+/* Disk, network, cpu modules alt foreground */
+@define-color col-6 #c0c0c0; 
+/* Urgent color */
+@define-color col-7 #ff5555;
+/* Separator foreground */
+@define-color col-8 #3f3f3f;
+/* Tag normal foreground */
+@define-color col-9 #5d5d5d;
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: 'IBM Plex Mono';
+    font-weight: normal;
+    font-size: 16px;
+    min-height: 0;
+    min-width: 0;
+}
+
+.modules-left,
+.modules-middle,
+.modules-right {
+    background-color: @col-1;
+}
+
+#waybar {
+    background: @col-1;
+}
+
+#workspaces button,
+#workspaces button.occupied,
+#workspaces button.focused,
+#workspaces button.urgent {
+    min-width: 31px;
+}
+
+#workspaces button {
+    color: @col-9;
+    padding: 0 2px;
+}
+
+#workspaces button.occupied {
+    color: @col-2;
+    background-color: @col-3;
+}
+
+#workspaces button.focused {
+    color: @col-2;
+    background-color: @col-4;
+}
+
+#workspaces button.urgent {
+    color: @col-7;
+    background-color: @col-1;
+}
+
+#mode {
+    color: @col-7;
+    margin: 0 11px;
+}
+
+#disk,
+#network,
+#cpu {
+    color: @col-6;
+    margin: 0 11px;
+}
+
+#pulseaudio,
+#memory,
+#clock {
+    color: @col-2;
+    margin: 0 11px;
+}
+
+#pulseaudio.muted {
+    color: @col-7;
+}
+
+#idle_inhibitor {
+    background-color: @col-5;
+    color: @col-2;
+    padding: 0 11px;
+    margin: 0 3px 0 0;
+}
+
+#tray {
+    background-color: @col-5;
+    padding: 0 11px;
+}
+
+#custom-separator {
+    color: @col-8;
+}

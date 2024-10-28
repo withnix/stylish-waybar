@@ -1,0 +1,115 @@
+/* Background, foreground */
+@define-color col-1 #0f0f0f;
+@define-color col-2 #ececec; 
+/* Main highlight background */
+@define-color col-3 #1d1d1d;
+/* Occupied tag, clock background */
+@define-color col-4 #303030;
+/* Focused tag foreground */
+@define-color col-5 #cbcad7;
+/* Normal tag foreground */
+@define-color col-6 #5d5d5d;
+/* Urgent color */
+@define-color col-7 #d7caca;
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: 'IBM Plex Mono', "FontAwesome Nerd Font";
+    font-weight: normal;
+    font-size: 16px;
+    min-height: 0;
+    min-width: 0;
+}
+
+.modules-left,
+.modules-middle,
+.modules-right {
+    background-color: @col-1;
+}
+
+#tags {
+    margin: 1px 2px;
+}
+
+#tags button,
+#tags button.occupied,
+#tags button.focused,
+#tags button.urgent {
+    min-width: 26px;
+    margin: 0 1px;
+    border-radius: 0;
+}
+
+#tags button {
+    color: @col-6;
+}
+
+#tags button.occupied {
+    color: @col-2;
+    background-color: @col-4;
+}
+
+#tags button.focused {
+    color: @col-5;
+    background-color: @col-3;
+}
+
+#tags button.urgent {
+    color: @col-7;
+    background-color: @col-3;
+}
+
+window#waybar { 
+    color: @col-3;
+    background-color: @col-3;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-color: @col-1;
+    border-style: solid;
+}
+
+#window,
+#window.focused {    
+    margin: 1px 0;
+}
+
+#window {
+    color: @col-3;
+    background-color: @col-3;
+    padding: 0 11px;
+}
+
+#window.focused {
+    color: @col-2;
+    background-color: @col-3;
+}
+
+#network,
+#network.disconnected,
+#clock {
+    padding: 0 11px;
+    margin: 1px 3px;
+}
+
+#network {
+    color: @col-2;
+    background-color: @col-3;
+}
+
+#network.disconnected {
+    color: @col-7;
+    background-color: @col-3;
+}
+
+#clock {
+    color: @col-2;
+    background-color: @col-4;
+}
+
+#tray {
+    background-color: @col-3;
+    background-image: linear-gradient(90deg, rgba(29,29,29,1) 0%, rgba(48,48,48,1) 100%);
+    padding: 0 11px;
+    margin: 1px 0;
+}
