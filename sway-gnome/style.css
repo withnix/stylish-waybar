@@ -7,20 +7,18 @@
 @define-color col-4 #1d1d1d;
 /* Tray, inhibitor modules background */
 @define-color col-5 #151515;
-/* Disk, network, cpu modules alt foreground */
+/* Network, cpu modules alt foreground */
 @define-color col-6 #c0c0c0;
 /* Urgent color */
 @define-color col-7 #ff5555;
-/* Separator foreground */
-@define-color col-8 #3f3f3f;
 /* Workspace normal foreground */
-@define-color col-9 #3d3d3d;
+@define-color col-8 #3d3d3d;
 
 * {
     border: none;
     border-radius: 0;
     /* Required ttf-nerd-fonts-symbols-mono package */
-    font-family: "IBM Plex Mono", "Symbols Nerd Font Mono";
+    font-family: "IBM Plex Sans", "Symbols Nerd Font Mono";
     font-weight: normal;
     font-size: 16px;
     min-height: 0;
@@ -43,7 +41,7 @@
 }
 
 #workspaces button {
-    color: @col-9;
+    color: @col-8;
 }
 
 #workspaces button:hover {
@@ -88,18 +86,6 @@
     color: @col-7;
 }
 
-#idle_inhibitor {
-    background-color: @col-5;
-    color: @col-2;
-    padding: 0 11px;
-    margin: 0 3px;
-}
-
 #tray {
-    background-color: @col-5;
-    padding: 0 11px;
-}
-
-#custom-separator {
-    color: @col-8;
+    margin: 0 11px;
 }

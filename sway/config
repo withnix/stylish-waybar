@@ -11,19 +11,19 @@
     ],
     "modules-center": [],
     "modules-right": [
-	"disk#home",
-	"custom/separator",
-	"disk#user",
-	"custom/separator",
-	"pulseaudio",
-	"custom/separator",
-	"network",
-	"custom/separator",
+	    "disk#home",
+	    "custom/separator",
+	    "disk#user",
+	    "custom/separator",
+	    "pulseaudio",
+	    "custom/separator",
+	    "network",
+	    "custom/separator",
         "memory",
-	"custom/separator",
+	    "custom/separator",
         "cpu",
-	"idle_inhibitor",
-	"tray",
+	    "idle_inhibitor",
+	    "tray",
         "clock",
     ],
 
@@ -35,29 +35,29 @@
 
     "disk#home": {
         "interval": 160,
-	"path": "/home",
-	"format": " {specific_free:0.0f}GB",
-	"unit": "GB",
+	    "path": "/home",
+	    "format": " {specific_free:0.0f}GB",
+	    "unit": "GB",
     },
 
     "disk#user": {
         "interval": 30,
-	"path": "/",
+	    "path": "/",
         "format": " {specific_free:0.0f}GB",
-	"unit": "GB",
+	    "unit": "GB",
     },
 
     "pulseaudio": {
-	"format": "{icon} {volume:>3}%",
-	"format-bluetooth": "{icon} {volume}%",
-	"format-muted": "󰝟",
-	"format-icons": {
+	    "format": "{icon} {volume:>3}%",
+	    "format-bluetooth": "{icon} {volume}%",
+	    "format-muted": "󰝟",
+	    "format-icons": {
 	    "default": ["", ""]
 	},
-	"scroll-step": 5,
-	"on-click": "pavucontrol",
-	"on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-	"tooltip": false,
+	    "scroll-step": 5,
+	    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+	    "on-click-right": "pavucontrol",
+	    "tooltip": false,
     },
 
     "network": {
@@ -87,9 +87,9 @@
     },
 
     "clock": {
-	"interval": 10,
-	"format": "{:%a %d %b}",
-	"tooltip-format": "{:%A %D %B}"
+	    "interval": 10,
+	    "format": "{:%a %d %b}",
+	    "tooltip-format": "{:%A %D %B}"
     },
 
     "idle_inhibitor": {
@@ -107,8 +107,8 @@
     },
 
     "custom/separator": {
-	"format": "/",
-	"interval": "once",
-	"tooltip": false
+	    "format": "/",
+	    "interval": "once",
+	    "tooltip": false
     }
 }

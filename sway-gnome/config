@@ -1,0 +1,85 @@
+{
+    /// Basic
+    "layer": "bottom",
+    "position": "top",
+    "height": 30,
+
+    /// Position
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+	    "pulseaudio",
+	    "network",
+        "memory",
+        "cpu",
+	    "tray"
+    ],
+
+    /// Configaration
+    "sway/mode": {
+        "format": "{}",
+        "tooltip": false
+    },
+
+    "sway/workspaces": {
+        "window-rewrite": {}
+     },
+
+    "pulseaudio": {
+	    "format": "{icon}",
+	    "format-bluetooth": "{icon}",
+	    "format-muted": "",
+	    "format-icons": {
+	        "default": ["", ""]
+	    },
+	    "scroll-step": 5,
+	    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+	    "on-click-right": "pavucontrol",
+	    "tooltip": true,
+	    "tooltip-format": "{volume}%"
+    },
+
+    "network": {
+        "format-ethernet": "",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": "",
+        "format-alt": " {:>3}%",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+
+    "cpu": {
+        "interval": 5,
+        "format": "",
+	    "format-alt": " {usage:>3}%",
+            "states": {
+	        "warning": 70,
+	        "critical": 90
+        }
+    },
+
+    "clock": {
+	    "interval": 10,
+	    "format": "{:%a %d %b}",
+	    "tooltip": false
+    },
+
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+}

@@ -9,3 +9,5 @@ git clone https://github.com/withnix/stylish-waybar.git
 ![Example](https://github.com/withnix/stylish-waybar/blob/main/assets/river.png)
 
 ![Example](https://github.com/withnix/stylish-waybar/blob/main/assets/sway.png)
+
+![Example](https://github.com/withnix/stylish-waybar/blob/main/assets/sway-gnome.png)
