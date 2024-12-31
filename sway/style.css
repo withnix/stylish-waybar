@@ -1,20 +1,18 @@
 /* Background, foreground */
 @define-color col-1 #0f0f0f;
 @define-color col-2 #ececec;
-/* Occupied tag background */
-@define-color col-3 #303030;
 /* Focused tag background */
-@define-color col-4 #1d1d1d;
+@define-color col-3 #1d1d1d;
 /* Tray, inhibitor modules background */
-@define-color col-5 #151515;
+@define-color col-4 #151515;
 /* Disk, network, cpu modules alt foreground */
-@define-color col-6 #c0c0c0;
-/* Urgent color */
-@define-color col-7 #ff5555;
+@define-color col-5 #c0c0c0;
+/* Urgent color, mode foreground */
+@define-color col-6 #ff5555;
 /* Separator foreground */
-@define-color col-8 #3f3f3f;
+@define-color col-7 #3f3f3f;
 /* Workspace normal foreground */
-@define-color col-9 #3d3d3d;
+@define-color col-8 #3d3d3d;
 
 * {
     border: none;
@@ -43,12 +41,12 @@
 }
 
 #workspaces button {
-    color: @col-9;
+    color: @col-8;
 }
 
 #workspaces button:hover {
     color: @col-2;
-    background-color: @col-4;
+    background-color: @col-3;
 }
 
 #workspaces button.focused {
@@ -57,19 +55,19 @@
 }
 
 #workspaces button.urgent {
-    color: @col-7;
+    color: @col-6;
     background-color: @col-1;
 }
 
 #mode {
-    color: @col-7;
+    color: @col-6;
     margin: 0 11px;
 }
 
 #disk,
 #network,
 #cpu {
-    color: @col-6;
+    color: @col-5;
     margin: 0 11px;
 }
 
@@ -81,25 +79,25 @@
 }
 
 #network.disconnected {
-    color: @col-7;
+    color: @col-6;
 }
 
 #pulseaudio.muted {
-    color: @col-7;
+    color: @col-6;
 }
 
 #idle_inhibitor {
-    background-color: @col-5;
+    background-color: @col-4;
     color: @col-2;
     padding: 0 11px;
     margin: 0 3px;
 }
 
 #tray {
-    background-color: @col-5;
+    background-color: @col-4;
     padding: 0 11px;
 }
 
 #custom-separator {
-    color: @col-8;
+    color: @col-7;
 }
